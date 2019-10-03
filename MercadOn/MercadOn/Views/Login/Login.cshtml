@@ -1,0 +1,32 @@
+﻿@model MercadOn.Models.Login.LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <form></form>
+        @using (Html.BeginForm())
+        {
+            <div id="email" class="form-control">
+                @Html.TextBoxFor(m => m.Email)
+            </div>
+
+            <div id="senha" class="form-control">
+                @Html.PasswordFor(m => m.Senha)
+            </div>
+
+            <input type="submit" value="Logar" title="Logar" name="Logar" id="btnLogin" />
+        }
+
+
+    </div>
+</body>
+</html>
