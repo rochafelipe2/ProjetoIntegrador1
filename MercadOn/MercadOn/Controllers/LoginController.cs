@@ -14,8 +14,8 @@ namespace MercadOn.Controllers
         public ActionResult Login()
         {
             LoginModel model = new LoginModel();
-            model.Email = "Email";
-            model.Senha = "Senha";
+            model.Email = "";
+            model.Senha = "";
             return View(model);
         }
         
