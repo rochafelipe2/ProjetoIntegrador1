@@ -145,6 +145,7 @@
     <Content Include="Content\StyleLogin\images\bg-01.jpg" />
     <Content Include="Content\StyleLogin\images\bg-01original.jpg" />
     <Content Include="Content\StyleLogin\images\icons\favicon.ico" />
+    <Content Include="Content\StyleLogin\images\logo-login.png" />
     <Content Include="Content\StyleLogin\index.html" />
     <Content Include="Content\StyleLogin\js\main.js" />
     <Content Include="Content\StyleLogin\vendor\animate\animate.css" />

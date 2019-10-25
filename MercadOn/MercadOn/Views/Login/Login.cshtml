@@ -37,19 +37,22 @@
     <div class="limiter">
         <div class="container-login100">
             
-            <div class="col-md-4 text-center">
-                <span urlimage="C:\Users\Aluno\Documents\GitHub\ProjetoIntegrador1\MercadOn\MercadOn\Content\StyleLogin\images\lOGO.png"></span>
+            <div class="wrap-login100"> 
                 
-            </div>
-            <div class="wrap-login100">
-                <form class="login100-form validate-form">
+                <form class="login100-form validate-form" >
+                    <div id="logo-login"  >
+                        <span class="login100-form-title p-b-43">
+                            <img src="~/Content/StyleLogin/images/logo-login.png" />
+                        </span>
+                    </div>
+
                     <span class="login100-form-title p-b-43">
                         Faça login para continuar
                     </span>
 
 
                     <div class="wrap-input100 validate-input" data-validate="Um email válido é necessário ex@abc.xyz">
-                        @Html.TextBoxFor(x => x.Email, new { @class = "input100" })                        
+                        @Html.TextBoxFor(x => x.Email, new { @class = "input100" })
                         <span class="focus-input100"></span>
                         <span class="label-input100">Email</span>
                     </div>
