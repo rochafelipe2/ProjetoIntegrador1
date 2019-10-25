@@ -1,0 +1,6 @@
+C:\Projetos\Academico\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\Projetos\Academico\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\Projetos\Academico\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.csprojAssemblyReference.cache
+C:\Projetos\Academico\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Projetos\Academico\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\Projetos\Academico\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
