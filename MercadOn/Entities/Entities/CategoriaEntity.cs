@@ -4,9 +4,6 @@ using System.Text;
 
 namespace Entities.Entities
 {
-
-
-
     public class CategoriaEntity
     {
         public int idCategoria { get; set; }
