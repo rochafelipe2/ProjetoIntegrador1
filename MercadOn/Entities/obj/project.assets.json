@@ -30,7 +30,7 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -50,6 +50,7 @@
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -179,31 +180,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\hp1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\Aluno\\Desktop\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Desktop\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Aluno\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
-      "projectName": "Entities",
-      "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
->>>>>>> 7a0e7ed3b5af3e58319b1c329914d77de9801a63
+      "projectPath": "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\hp1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hp1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -235,11 +224,25 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\Entities.csproj.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
