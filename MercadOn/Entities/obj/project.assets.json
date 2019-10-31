@@ -185,11 +185,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
       "projectName": "Entities",
       "projectPath": "C:\\Users\\Aluno\\Desktop\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Aluno\\Desktop\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Aluno\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
+      "projectName": "Entities",
+      "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aluno\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
+>>>>>>> 7a0e7ed3b5af3e58319b1c329914d77de9801a63
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
