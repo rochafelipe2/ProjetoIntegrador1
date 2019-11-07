@@ -179,6 +179,25 @@
     <Content Include="Content\StyleLogin\vendor\select2\select2.js" />
     <Content Include="Content\StyleLogin\vendor\select2\select2.min.css" />
     <Content Include="Content\StyleLogin\vendor\select2\select2.min.js" />
+    <Content Include="Content\StylePaginaProdutos\.gitignore" />
+    <Content Include="Content\StylePaginaProdutos\css\shop-homepage.css" />
+    <Content Include="Content\StylePaginaProdutos\gulpfile.js" />
+    <Content Include="Content\StylePaginaProdutos\index.html" />
+    <Content Include="Content\StylePaginaProdutos\logo-login.png" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\StylePaginaProdutos\vendor\jquery\jquery.js" />
+    <Content Include="Content\StylePaginaProdutos\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\StylePaginaProdutos\vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\StylePaginaProdutos\vendor\jquery\jquery.slim.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -264,6 +283,26 @@
     <Content Include="Content\StyleLogin\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="Content\StyleLogin\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Content\StyleLogin\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\StylePaginaProdutos\.travis.yml" />
+    <Content Include="Content\StylePaginaProdutos\.vs\config\applicationhost.config" />
+    <Content Include="Content\StylePaginaProdutos\.vs\ProjectSettings.json" />
+    <Content Include="Content\StylePaginaProdutos\.vs\slnx.sqlite" />
+    <Content Include="Content\StylePaginaProdutos\LICENSE" />
+    <Content Include="Content\StylePaginaProdutos\package-lock.json" />
+    <Content Include="Content\StylePaginaProdutos\package.json" />
+    <Content Include="Content\StylePaginaProdutos\README.md" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\jquery\jquery.min.map" />
+    <Content Include="Content\StylePaginaProdutos\vendor\jquery\jquery.slim.min.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -294,6 +333,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\StylePaginaProdutos\.vs\startbootstrap-shop-homepage-gh-pages\v15\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
