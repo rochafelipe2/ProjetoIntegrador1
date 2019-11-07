@@ -26,5 +26,19 @@ namespace MercadOn.Controllers
 
             return View();
         }
+
+        public ActionResult QuemSomos()
+        {
+            ViewBag.MeuBago = "Igual uma sacola murcha";
+
+            return View();
+        }
+
+        public ActionResult Contato()
+        {
+            ViewBag.Contato = "Ligar na Chácara";
+
+            return View();
+        }
     }
 }
