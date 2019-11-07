@@ -21,3 +21,12 @@ C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\net
 C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
 C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\Entities.pdb
+C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.csprojAssemblyReference.cache
+C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.csproj.CoreCompileInputs.cache
+C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.dll
+C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.pdb
