@@ -3,11 +3,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
-<<<<<<< HEAD
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\Aluno\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\project.assets.json</ProjectAssetsFile>
-=======
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Projeto\ProjetoIntegrador1\MercadOn\Entities\obj\project.assets.json</ProjectAssetsFile>
->>>>>>> origin/master
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Aluno\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
