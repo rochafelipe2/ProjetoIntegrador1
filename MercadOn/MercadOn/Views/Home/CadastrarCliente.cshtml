@@ -1,0 +1,158 @@
+﻿@model MercadOn.Models.Cliente.ClienteModel
+@{Layout = null;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MercadON</title>
+    <meta charset="UTF-8">
+
+    <script src="~/Content/StyleLogin/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/Content/StyleLogin/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/css/main.css">
+    <link rel="stylesheet" href="~/Content/alertify/css/alertify.css">
+    <link rel="stylesheet" href="~/Content/alertify/css/themes/default.css">
+    <!--===============================================================================================-->
+</head>
+<body style="background-color: #666666;">
+
+
+    <div class="limiter">
+        <div class="container-login100">
+            @using (@Html.BeginForm("CadastrarCliente", "Home", FormMethod.Post, new { @class = "login100-form validate-form" }))
+            {
+            <form class="login100-form validate-form">
+                <div id="logo-login">
+                    <span class="login100-form-title p-b-43">
+                        <img src="~/Content/StyleLogin/images/logo-login.png" />
+                    </span>
+                </div>
+
+                <span class="login100-form-title p-b-43">
+                    Bem-vindo, faça seu cadastro
+                </span>
+
+
+                <div class="wrap-input100 validate-input" data-validate="Um email válido é necessário ex@abc.xyz">
+                    @Html.TextBoxFor(x => x.cpf, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">CPF</span>
+                </div>
+
+
+                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                    @Html.TextBoxFor(x => x.nome, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">Nome</span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                    @Html.TextBoxFor(x => x.celular, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">Celular</span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                    @Html.TextBoxFor(x => x.email, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">E-mail</span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                    @Html.TextBoxFor(x => x.senha, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">Senha</span>
+                </div>
+
+
+                <div class="flex-sb-m w-full p-t-3 p-b-32">
+
+                </div>
+
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn">
+                        Cadastrar
+                    </button>
+                </div>
+
+
+
+                <div class="login100-form-social flex-c-m">
+                    <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+                        <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+            </form>
+            }
+
+        </div>
+    </div>
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <script src="~/Content/StyleLogin/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/StyleLogin/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/Content/StyleLogin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/StyleLogin/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/StyleLogin/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/Content/StyleLogin/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/StyleLogin/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/StyleLogin/js/main.js"></script>
+
+    <script src="~/Content/alertify/alertify.js"></script>
+    <script src="~/Content/alertify/alertify.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(function () {
+                configureModal();
+
+                var status = "@ViewBag.Status";
+
+                if (status != "") {
+                    if (status != "False") {
+                        alertify.success("Usuário logado");
+                    } else {
+                        alertify.error("Usuário não logado");
+                    }
+                }
+
+            });
+
+
+        });
+
+        function configureModal() {
+            alertify.confirm().setHeader("Atenção");
+            alertify.alert().setHeader("Atenção");;
+        }
+    </script>
+</body>
+</html>

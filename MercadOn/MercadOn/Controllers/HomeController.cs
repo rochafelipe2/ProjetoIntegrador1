@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MercadOn.Models.Cliente;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -37,6 +38,25 @@ namespace MercadOn.Controllers
         public ActionResult Contato()
         {
             ViewBag.Contato = "Ligar na Chácara";
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult CadastrarCliente()
+        {
+
+
+
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult CadastrarCliente(ClienteModel model)
+        {
+
+
 
             return View();
         }
