@@ -1,4 +1,4 @@
-﻿@model MercadOn.Models.Login.LoginModel
+﻿@model MercadOn.Models.Cliente.ClienteModel
 @{Layout = null;
 
 }
@@ -40,82 +40,77 @@
 
     <div class="limiter">
         <div class="container-login100">
-
-            <div class="wrap-login100">
-                @using (@Html.BeginForm("Login", "Login", FormMethod.Post, new { @class= "login100-form validate-form" }))
-                {
-                <form class="login100-form validate-form">
-                    <div id="logo-login">
-                        <span class="login100-form-title p-b-43">
-                            <img src="~/Content/StyleLogin/images/logo-login.png" />
-                        </span>
-                    </div>
-
+            @using (@Html.BeginForm("CadastrarCliente", "Home", FormMethod.Post, new { @class = "login100-form validate-form" }))
+            {
+            <form class="login100-form validate-form">
+                <div id="logo-login">
                     <span class="login100-form-title p-b-43">
-                        Faça login para continuar
+                        <img src="~/Content/StyleLogin/images/logo-login.png" />
                     </span>
-
-
-                    <div class="wrap-input100 validate-input" data-validate="Um email válido é necessário ex@abc.xyz">
-                        @Html.TextBoxFor(x => x.Email, new { @class = "input100" })
-                        <span class="focus-input100"></span>
-                        <span class="label-input100">Email</span>
-                    </div>
-
-
-                    <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
-                        @Html.PasswordFor(x => x.Senha, new { @class = "input100" })
-                        <span class="focus-input100"></span>
-                        <span class="label-input100">Senha</span>
-                    </div>
-
-                    <div class="flex-sb-m w-full p-t-3 p-b-32">
-                        <div class="contact100-form-checkbox">
-                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                            <label class="label-checkbox100" for="ckb1">
-                                Me lembrar neste dispositivo
-                            </label>
-                        </div>
-
-                        <div>
-                            <a href="#" class="txt1">
-                                Esqueceu sua senha?
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
-                            Login
-                        </button>
-                    </div>
-
-                    <div class="container-login100-form-btn">
-                      @Html.ActionLink("Cadastrar-se","CadastrarCliente","Home")
-                    </div>
-                    <div class="text-center p-t-46 p-b-20">
-                        <span class="txt2">
-                            Ou faça login usando Facebook
-                        </span>
-                    </div>
-
-                    <div class="login100-form-social flex-c-m">
-                        <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-                            <i class="fa fa-facebook-f" aria-hidden="true"></i>
-                        </a>
-
-                    </div>
-                </form>
-                    }
-                    <div class="login100-more" style="background-image: url('../../Content/StyleLogin/images/bg-01.jpg')">
-
-                    </div>
                 </div>
+
+                <span class="login100-form-title p-b-43">
+                    Bem-vindo, faça seu cadastro
+                </span>
+
+
+                <div class="wrap-input100 validate-input" data-validate="Um email válido é necessário ex@abc.xyz">
+                    @Html.TextBoxFor(x => x.cpf, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">CPF</span>
+                </div>
+
+
+                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                    @Html.TextBoxFor(x => x.nome, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">Nome</span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                    @Html.TextBoxFor(x => x.celular, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">Celular</span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                    @Html.TextBoxFor(x => x.email, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">E-mail</span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                    @Html.TextBoxFor(x => x.senha, new { @class = "input100" })
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">Senha</span>
+                </div>
+
+
+                <div class="flex-sb-m w-full p-t-3 p-b-32">
+
+                </div>
+
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn">
+                        Cadastrar
+                    </button>
+                </div>
+
+
+
+                <div class="login100-form-social flex-c-m">
+                    <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+                        <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+            </form>
+            }
+
         </div>
     </div>
     <!--===============================================================================================-->
-    
     <!--===============================================================================================-->
     <script src="~/Content/StyleLogin/vendor/animsition/js/animsition.min.js"></script>
     <!--===============================================================================================-->
@@ -138,7 +133,7 @@
         $(document).ready(function () {
             $(function () {
                 configureModal();
-                
+
                 var status = "@ViewBag.Status";
 
                 if (status != "") {

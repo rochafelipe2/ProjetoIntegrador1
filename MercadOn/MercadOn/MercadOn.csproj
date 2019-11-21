@@ -141,6 +141,7 @@
     <Compile Include="Migrations\201911210121149_add-tabela-administrador2.designer.cs">
       <DependentUpon>201911210121149_add-tabela-administrador2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cliente\ClienteModel.cs" />
     <Compile Include="Models\Login\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Configuration.cs" />
@@ -383,6 +384,7 @@
     <Content Include="Views\Cadastro\Cadastro_cliente.cshtml" />
     <Content Include="Views\Home\QuemSomos.cshtml" />
     <Content Include="Views\Home\Contato.cshtml" />
+    <Content Include="Views\Home\CadastrarCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
