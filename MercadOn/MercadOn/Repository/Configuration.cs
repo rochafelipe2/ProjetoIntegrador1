@@ -16,7 +16,7 @@ namespace DB
 
             if (context.Administradores.Count() == 0)
             {
-
+                
                 var usuarioMateus = new UsuarioEntity()
                 {
                     ativo = 1,
