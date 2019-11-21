@@ -37,7 +37,7 @@
   },
   "libraries": {
     "EntityFramework/6.3.0": {
-      "sha512": "mEvhoXscTyLFMcnbLzKlbWdx6N8fCY2IMe4drjUTMFqOqI4KThnTPXr1m50oXDJAn5PvCy2e90IcwN/OxkJUjg==",
+      "sha512": "lEQ9h1aJMa1l/+mqAfUX3OmhPyBMMVyxOkKHYM9okrFXcFADz8UsTc3lOon7ahmKpwQ277aWypFFH2T9kKRsag==",
       "type": "package",
       "path": "entityframework/6.3.0",
       "hasTools": true,
@@ -88,7 +88,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -238,27 +238,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lipdi\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\lipdi\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aluno\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lipdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"

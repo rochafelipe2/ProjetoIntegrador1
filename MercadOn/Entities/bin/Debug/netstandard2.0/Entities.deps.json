@@ -28,7 +28,7 @@
         "runtime": {
           "EntityFramework.dll": {
             "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.300.19.46401"
+            "fileVersion": "6.400.19.55301"
           }
         }
       }
@@ -43,14 +43,14 @@
     "EntityFramework/6.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mEvhoXscTyLFMcnbLzKlbWdx6N8fCY2IMe4drjUTMFqOqI4KThnTPXr1m50oXDJAn5PvCy2e90IcwN/OxkJUjg==",
+      "sha512": "sha512-lEQ9h1aJMa1l/+mqAfUX3OmhPyBMMVyxOkKHYM9okrFXcFADz8UsTc3lOon7ahmKpwQ277aWypFFH2T9kKRsag==",
       "path": "entityframework/6.3.0",
       "hashPath": "entityframework.6.3.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "sha512-bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
