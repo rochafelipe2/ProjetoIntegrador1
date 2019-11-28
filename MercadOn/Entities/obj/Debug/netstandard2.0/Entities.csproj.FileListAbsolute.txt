@@ -22,3 +22,14 @@ C:\Users\Aluno\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\n
 C:\Users\Aluno\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.csproj.CopyComplete
 C:\Users\Aluno\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\Aluno\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\Entities.deps.json
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\EntityFramework.dll
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\bin\Debug\netstandard2.0\EntityFramework.xml
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.csprojAssemblyReference.cache
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfoInputs.cache
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.csproj.CopyComplete
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.dll
+C:\Users\hp1\Documents\GitHub\ProjetoIntegrador1\MercadOn\Entities\obj\Debug\netstandard2.0\Entities.pdb

@@ -184,6 +184,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Style Pagina inicial\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\Style Pagina inicial\assets\img\01.jpg" />
+    <Content Include="Content\Style Pagina inicial\assets\img\02.jpg" />
+    <Content Include="Content\Style Pagina inicial\assets\img\03.jpg" />
+    <Content Include="Content\Style Pagina inicial\assets\img\238.jpg" />
+    <Content Include="Content\Style Pagina inicial\assets\img\Mercadon.png" />
+    <Content Include="Content\Style Pagina inicial\index.html" />
     <Content Include="Content\StyleLogin\css\main.css" />
     <Content Include="Content\StyleLogin\css\util.css" />
     <Content Include="Content\StyleLogin\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -193,7 +200,10 @@
     <Content Include="Content\StyleLogin\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
     <Content Include="Content\StyleLogin\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
     <Content Include="Content\StyleLogin\fonts\montserrat\OFL.txt" />
+    <Content Include="Content\StyleLogin\images\2580781.jpg" />
+    <Content Include="Content\StyleLogin\images\25807871blurmaior.png" />
     <Content Include="Content\StyleLogin\images\5a0c72729642de34b6b65ce7 %281%29.png" />
+    <Content Include="Content\StyleLogin\images\7546.jpg" />
     <Content Include="Content\StyleLogin\images\bg-01.jpg" />
     <Content Include="Content\StyleLogin\images\bg-01original.jpg" />
     <Content Include="Content\StyleLogin\images\icons\favicon.ico" />
