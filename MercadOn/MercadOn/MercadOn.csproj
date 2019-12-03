@@ -244,10 +244,19 @@
     <Content Include="Content\StyleLogin\vendor\select2\select2.min.css" />
     <Content Include="Content\StyleLogin\vendor\select2\select2.min.js" />
     <Content Include="Content\StylePaginaProdutos\.gitignore" />
+    <Content Include="Content\StylePaginaProdutos\coca-cola-20oz-bottles.jpg" />
+    <Content Include="Content\StylePaginaProdutos\colgate-target-variety-pack.jpg" />
     <Content Include="Content\StylePaginaProdutos\css\shop-homepage.css" />
     <Content Include="Content\StylePaginaProdutos\gulpfile.js" />
+    <Content Include="Content\StylePaginaProdutos\imgsprodutos\5b58246ccb412-failed-products-innovations-technology-5b471e962fbd1__700.jpg" />
+    <Content Include="Content\StylePaginaProdutos\imgsprodutos\CCola.jpg" />
+    <Content Include="Content\StylePaginaProdutos\imgsprodutos\Del-Valle.png" />
+    <Content Include="Content\StylePaginaProdutos\imgsprodutos\mag-25Bacteria-t_CA0-master675.jpg" />
+    <Content Include="Content\StylePaginaProdutos\imgsprodutos\PIF.jpg" />
+    <Content Include="Content\StylePaginaProdutos\imgsprodutos\RNK.jpg" />
     <Content Include="Content\StylePaginaProdutos\index.html" />
     <Content Include="Content\StylePaginaProdutos\logo-login.png" />
+    <Content Include="Content\StylePaginaProdutos\Nescau.png" />
     <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Content\StylePaginaProdutos\vendor\bootstrap\css\bootstrap-reboot.css" />
@@ -402,6 +411,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\StylePaginaCarrinho\" />
     <Folder Include="Content\StylePaginaProdutos\.vs\startbootstrap-shop-homepage-gh-pages\v15\" />
   </ItemGroup>
   <ItemGroup>
