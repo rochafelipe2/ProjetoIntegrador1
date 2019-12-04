@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MercadoProdutoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -408,6 +409,7 @@
     <Content Include="Views\Home\QuemSomos.cshtml" />
     <Content Include="Views\Home\Contato.cshtml" />
     <Content Include="Views\Home\CadastrarCliente.cshtml" />
+    <Content Include="Views\MercadoProduto\MercadoProduto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

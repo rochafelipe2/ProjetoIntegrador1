@@ -33,6 +33,7 @@ namespace MercadOn.Controllers
             {
                 ViewBag.Status = true;
                 //Usuário existeste.
+                return RedirectToAction("MercadoProduto", "MercadoProduto");
             }
             else
             {

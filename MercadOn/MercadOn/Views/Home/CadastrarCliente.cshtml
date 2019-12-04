@@ -35,6 +35,24 @@
     <link rel="stylesheet" href="~/Content/alertify/css/themes/default.css">
     <!--===============================================================================================-->
 </head>
+<div>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="/Home">
+                <img src="~/Content/Style Pagina inicial/assets/img/Mercadon.png" width="200" />
+            </a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                 id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Quem Somos</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/Home/CadastrarCliente">Criar Conta</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="/Login/Login">Fazer LogIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
 <body style="background-color: #666666;">
 
 
@@ -42,70 +60,70 @@
         <div class="container-login100">
             @using (@Html.BeginForm("CadastrarCliente", "Home", FormMethod.Post, new { @class = "login100-form validate-form" }))
             {
-            <form class="login100-form validate-form">
-                <div id="logo-login">
+                <form class="login100-form validate-form">
+                    <div id="logo-login">
+                        <span class="login100-form-title p-b-43">
+                            <img src="~/Content/StyleLogin/images/logo-login.png" />
+                        </span>
+                    </div>
+
                     <span class="login100-form-title p-b-43">
-                        <img src="~/Content/StyleLogin/images/logo-login.png" />
+                        Bem-vindo, faça seu cadastro
                     </span>
-                </div>
-
-                <span class="login100-form-title p-b-43">
-                    Bem-vindo, faça seu cadastro
-                </span>
 
 
-                <div class="wrap-input100 validate-input" data-validate="Um email válido é necessário ex@abc.xyz">
-                    @Html.TextBoxFor(x => x.cpf, new { @class = "input100" })
-                    <span class="focus-input100"></span>
-                    <span class="label-input100">CPF</span>
-                </div>
+                    <div class="wrap-input100 validate-input" data-validate="Um email válido é necessário ex@abc.xyz">
+                        @Html.TextBoxFor(x => x.cpf, new { @class = "input100" })
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">CPF</span>
+                    </div>
 
 
-                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
-                    @Html.TextBoxFor(x => x.nome, new { @class = "input100" })
-                    <span class="focus-input100"></span>
-                    <span class="label-input100">Nome</span>
-                </div>
+                    <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                        @Html.TextBoxFor(x => x.nome, new { @class = "input100" })
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Nome</span>
+                    </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
-                    @Html.TextBoxFor(x => x.celular, new { @class = "input100" })
-                    <span class="focus-input100"></span>
-                    <span class="label-input100">Celular</span>
-                </div>
+                    <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                        @Html.TextBoxFor(x => x.celular, new { @class = "input100" })
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Celular</span>
+                    </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
-                    @Html.TextBoxFor(x => x.email, new { @class = "input100" })
-                    <span class="focus-input100"></span>
-                    <span class="label-input100">E-mail</span>
-                </div>
+                    <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                        @Html.TextBoxFor(x => x.email, new { @class = "input100" })
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">E-mail</span>
+                    </div>
 
-                <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
-                    @Html.TextBoxFor(x => x.senha, new { @class = "input100" })
-                    <span class="focus-input100"></span>
-                    <span class="label-input100">Senha</span>
-                </div>
-
-
-                <div class="flex-sb-m w-full p-t-3 p-b-32">
-
-                </div>
+                    <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                        @Html.TextBoxFor(x => x.senha, new { @class = "input100" })
+                        <span class="focus-input100"></span>
+                        <span class="label-input100">Senha</span>
+                    </div>
 
 
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn">
-                        Cadastrar
-                    </button>
-                </div>
+                    <div class="flex-sb-m w-full p-t-3 p-b-32">
+
+                    </div>
+
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Cadastrar
+                        </button>
+                    </div>
 
 
 
-                <div class="login100-form-social flex-c-m">
-                    <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-                        <i class="fa fa-facebook-f" aria-hidden="true"></i>
-                    </a>
+                    <div class="login100-form-social flex-c-m">
+                        <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+                            <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                        </a>
 
-                </div>
-            </form>
+                    </div>
+                </form>
             }
 
         </div>
