@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mateus\\Desktop\\ProjetoIntegrador1-master\\MercadOn\\Entities\\Entities.csproj": {}
+    "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mateus\\Desktop\\ProjetoIntegrador1-master\\MercadOn\\Entities\\Entities.csproj": {
+    "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mateus\\Desktop\\ProjetoIntegrador1-master\\MercadOn\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Mateus\\Desktop\\ProjetoIntegrador1-master\\MercadOn\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mateus\\Desktop\\ProjetoIntegrador1-master\\MercadOn\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\hp1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
