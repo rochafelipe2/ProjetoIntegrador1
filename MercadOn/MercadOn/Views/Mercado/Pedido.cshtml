@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "Pedido";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+
+<h2>Pedido </h2> <br /><br /><button class="btn-success" style="float:right" onclick="finalizarPedido()">Finalizar pedido</button>
+<div id="totalPedido"></div>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+@*<link rel="stylesheet" href="/resources/demos/style.css">*@
+<style>
+    .draggable {
+        width: 90px;
+        height: 80px;
+        padding: 5px;
+        float: left;
+        margin: 0 10px 10px 0;
+        font-size: .9em;
+    }
+
+    .ui-widget-header p, .ui-widget-content p {
+        margin: 0;
+    }
+
+    #snaptarget {
+        height: 140px;
+    }
+</style>
+
+<body>
+
+    <div id="snaptarget" class="ui-widget-header" style="height:300px">
+        <p>Meu carrinho</p>
+    </div>
+
+    <br style="clear:both">
+
+    <div id="draggable" class="draggable ui-widget-content">
+        
+        <div class="card h-25">
+            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/5b58246ccb412-failed-products-innovations-technology-5b471e962fbd1__700.jpg" alt=""></a>
+            <a href="#">Salgadinhos</a>
+            <h5>R$6.99</h5>
+            <div class="card-body">
+                <h4 class="card-title"></h4>
+
+
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div id="draggable2" class="draggable ui-widget-content">
+        <div class="card h-25">
+            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/CCola.jpg" alt=""></a>
+            <a href="#">Coca - Cola</a>
+            <h5>R$$5.99</h5>
+            <div class="card-body">
+                <h4 class="card-title"></h4>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="draggable3" class="draggable ui-widget-content">
+        <div class="card h-25">
+            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/Del-Valle.png" alt=""></a>
+            <a href="#">Del Valle Sucos</a>
+            <h5>R$6.99</h5>
+            <div class="card-body">
+                <h4 class="card-title"></h4>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="draggable4" class="draggable ui-widget-content">
+        <div class="card h-25">
+            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/mag-25Bacteria-t_CA0-master675.jpg" alt=""></a>
+            <a href="#">Sabonete anti-batericida.</a>
+            <h5>R$ 8.00</h5>
+            <div class="card-body">
+                <h4 class="card-title"></h4>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="draggable5" class="draggable ui-widget-content">
+        <div class="card h-25">
+            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/PIF.jpg" alt=""></a>
+            <a href="#">Lasanha Congelada</a>
+            <h5>R$6.99</h5>
+            <div class="card-body">
+                <h4 class="card-title"></h4>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(function () {
+                $("#draggable").draggable({ snap: true });
+                $("#draggable2").draggable({ snap: ".ui-widget-header" });
+                $("#draggable3").draggable({ snap: ".ui-widget-header", snapMode: "outer" });
+                $("#draggable4").draggable({ grid: [20, 20] });
+                $("#draggable5").draggable({ grid: [80, 80] });
+            });
+
+
+
+
+        });
+
+        function finalizarPedido() {
+            alertify.confirm("Deseja finalizar o pedido?", function () {
+                alertify.success("Seu pedido foi finalizado, aguarde a entrega.");
+            });
+        }
+
+    </script>
+}

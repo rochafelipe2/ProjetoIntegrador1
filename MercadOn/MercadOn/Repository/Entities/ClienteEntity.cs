@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Entities.Entities
 {
-    class ClienteEntity
+    public class ClienteEntity
     {
+        [Key]
         public int idCliente { get; set; }
-        public int cpf { get; set; }
+        public long cpf { get; set; }
         public string nome { get; set; }
-        public int celular { get; set; }
+        public long celular { get; set; }
+        [ForeignKey("UsuarioEntity")]
         public int idUsuario { get; set; }
-        public int ativo { get; set; }
         public UsuarioEntity UsuarioEntity { get; set; }
+        public int ativo { get; set; }
+        
     }
 }

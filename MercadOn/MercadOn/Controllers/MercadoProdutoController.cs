@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MercadOn.Models.Mercado;
+using MercadOn.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,6 +17,13 @@ namespace MercadOn.Controllers
         }
 
         public ActionResult MercadoProduto()
+        {
+            return View();
+        }
+
+       
+
+        public ActionResult Produto(long ID)
         {
             return View();
         }

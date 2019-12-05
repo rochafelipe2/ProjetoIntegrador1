@@ -245,19 +245,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
       "projectName": "Entities",
       "projectPath": "C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\lipdi\\.nuget\\packages\\",
       "outputPath": "C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Mateus\\Desktop\\New folder\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
-      "projectName": "Entities",
-      "projectPath": "C:\\Users\\Mateus\\Desktop\\New folder\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mateus\\Desktop\\New folder\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
->>>>>>> 4236314a9f7d2fc220f5c3b3bed6cd67750ed3e3
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -307,5 +299,13 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\Entities.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

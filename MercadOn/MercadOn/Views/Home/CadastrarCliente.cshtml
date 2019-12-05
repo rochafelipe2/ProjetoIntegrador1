@@ -33,6 +33,8 @@
     <link rel="stylesheet" type="text/css" href="~/Content/StyleLogin/css/main.css">
     <link rel="stylesheet" href="~/Content/alertify/css/alertify.css">
     <link rel="stylesheet" href="~/Content/alertify/css/themes/default.css">
+
+    <link rel="stylesheet" href="~/Content/alertify/css/themes/default.css">
     <!--===============================================================================================-->
 </head>
 <div>
@@ -54,7 +56,8 @@
 </div>
 
 <body style="background-color: #666666;">
-
+    <br />
+    <br />
 
     <div class="limiter">
         <div class="container-login100">
@@ -66,6 +69,7 @@
                             <img src="~/Content/StyleLogin/images/logo-login.png" />
                         </span>
                     </div>
+                    <h3>@Html.ActionLink("Sou Supermercado", "CadastrarMercado", "Home", null, null)</h3>
 
                     <span class="login100-form-title p-b-43">
                         Bem-vindo, faça seu cadastro
@@ -98,7 +102,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
-                        @Html.TextBoxFor(x => x.senha, new { @class = "input100" })
+                        @Html.PasswordFor(x => x.senha, new { @class = "input100" })
                         <span class="focus-input100"></span>
                         <span class="label-input100">Senha</span>
                     </div>
@@ -116,9 +120,9 @@
                     </div>
 
 
-
+                    <br />
                     <div class="login100-form-social flex-c-m">
-                        <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+                        <a href="" class="login100-form-social-item flex-c-m bg1 m-r-5">
                             <i class="fa fa-facebook-f" aria-hidden="true"></i>
                         </a>
 
@@ -143,22 +147,23 @@
     <script src="~/Content/StyleLogin/vendor/countdowntime/countdowntime.js"></script>
     <!--===============================================================================================-->
     <script src="~/Content/StyleLogin/js/main.js"></script>
-
     <script src="~/Content/alertify/alertify.js"></script>
     <script src="~/Content/alertify/alertify.min.js"></script>
+
+
     <script type="text/javascript">
 
         $(document).ready(function () {
             $(function () {
                 configureModal();
 
-                var status = "@ViewBag.Status";
+                var status = "@TempData["Status"]";
 
                 if (status != "") {
                     if (status != "False") {
-                        alertify.success("Usuário logado");
+                        alertify.success("Usuário Cadastrado");
                     } else {
-                        alertify.error("Usuário não logado");
+                        alertify.error("Usuário não Cadastrado");
                     }
                 }
 

@@ -12,6 +12,9 @@ namespace MercadOn
         
         public DbSet<UsuarioEntity> Usuarios { get; set; }
         public DbSet<AdministradorEntity> Administradores { get; set; }
+        public DbSet<ClienteEntity> Clientes { get; set; }
+
+        public DbSet<MercadoEntity> Mercados { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

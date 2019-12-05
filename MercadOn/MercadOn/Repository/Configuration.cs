@@ -14,6 +14,28 @@ namespace DB
         protected override void Seed(ContextMercadOn context)
         {
 
+            if(context.Mercados.Count() == 0)
+            {
+                var mercadoInicial = new Entities.Entities.MercadoEntity()
+                {
+                    ativo = 1,
+                    cnpj = 123456789,
+                    nome = "Mercado Carrefour",
+                    url = "~/Content/StyleLogin/images/5a0c72729642de34b6b65ce7 (1).png",
+                    UsuarioEntity = new Entities.Entities.UsuarioEntity()
+                    {
+                        ativo = 1,
+                        dataCriacao = DateTime.Now,
+                        dataAlteracao = DateTime.Now,
+                        email = "carrefour@mercadon.com",
+                        senha = "123456"
+                    }
+                };
+
+                context.Mercados.Add(mercadoInicial);
+                context.SaveChanges();
+            }
+
             if (context.Administradores.Count() == 0)
             {
                 

@@ -1,0 +1,84 @@
+﻿@model MercadOn.Models.Cliente.ClienteModel
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+
+<h2>Editar</h2>
+
+
+<div class="limiter">
+
+    @using (@Html.BeginForm("Editar", "Cliente", FormMethod.Post, new { @class = "login100-form validate-form" }))
+    {
+        @Html.HiddenFor(x => x.clienteid, new { @class = "input100" })
+        <div class="wrap-input100 validate-input" data-validate="Um email válido é necessário ex@abc.xyz">
+            @Html.TextBoxFor(x => x.cpf, new { @class = "input100" })
+            <span class="focus-input100"></span>
+            <span class="label-input100">CPF</span>
+        </div>
+
+
+        <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+            @Html.TextBoxFor(x => x.nome, new { @class = "input100" })
+            <span class="focus-input100"></span>
+            <span class="label-input100">Nome</span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+            @Html.TextBoxFor(x => x.celular, new { @class = "input100" })
+            <span class="focus-input100"></span>
+            <span class="label-input100">Celular</span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+            @Html.TextBoxFor(x => x.email, new { @class = "input100", @disabled = "disabled" })
+            <span class="focus-input100"></span>
+            <span class="label-input100">E-mail</span>
+        </div>
+
+       
+
+
+        <div class="flex-sb-m w-full p-t-3 p-b-32">
+
+        </div>
+
+
+        <div class="container-login100-form-btn">
+            <button class="login100-form-btn">
+                Editar
+            </button>
+        </div>
+
+    }
+
+</div>
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(function () {
+                configureModal();
+
+                var status = "@TempData["Status"]";
+
+                if (status != "") {
+                    if (status != "False") {
+                        alertify.success("Cliente atualizado");
+                    } else {
+                        alertify.error("Cliente não atualizado.");
+                    }
+                }
+
+            });
+
+
+        });
+
+        function configureModal() {
+            alertify.confirm().setHeader("Atenção");
+            alertify.alert().setHeader("Atenção");;
+        }
+    </script>
+}

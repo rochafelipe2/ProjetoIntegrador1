@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="Mercados">
                             Mercados
                             <span class="sr-only">(current)</span>
                         </a>
@@ -64,6 +64,7 @@
 
                 <div id="Logo"
             <span><img src="~/Content/StyleLogin/images/5a0c72729642de34b6b65ce7 (1).png" height="200px" /></span>
+                @Html.ActionLink("Criar pedido", "Pedido", "Mercado", new { mercadoid=1, clienteid=2 }, "")
              </div>
                 <h1 class="my-4">Categorias</h1>
                 <div class="list-group">
@@ -144,7 +145,7 @@
                             <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/Del-Valle.png" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Del Valle Sucos</a>
+                                    <a href="Produto/1">Del Valle Sucos</a>
                                 </h4>
                                 <h5>$4.99</h5>
                                 <p class="card-text">Sucos del valles diversos sabores.</p>

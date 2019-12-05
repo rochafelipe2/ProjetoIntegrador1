@@ -1,0 +1,60 @@
+﻿@model MercadOn.Models.Mercado.MercadoModel
+@{
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+
+
+
+                <h2>Lista de Mercados</h2><br />
+                <div class="row">
+                    @{
+                        foreach (var mercado in Model.Mercados)
+                        {
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <a href="/MercadoProduto/MercadoProduto"><img class="card-img-top" src="@mercado.Url" alt=""></a>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="/MercadoProduto/MercadoProduto">@mercado.NomeMercado</a>
+                                        </h4>
+
+                                        <p class="card-text">@mercado.Endereco</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        }
+                    }
+
+
+                </div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(function () {
+                configureModal();
+
+                var status = "@ViewBag.Status";
+
+                if (status != "") {
+                    if (status != "False") {
+                        alertify.success("Mercado Cadastrado");
+                    } else {
+                        alertify.error("Mercado não Cadastrado");
+                    }
+                }
+
+            });
+
+
+        });
+
+        function configureModal() {
+            alertify.confirm().setHeader("Atenção");
+            alertify.alert().setHeader("Atenção");;
+        }
+    </script>
+</body>
+
+</html>
