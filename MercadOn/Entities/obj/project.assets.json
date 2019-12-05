@@ -5,8 +5,8 @@
       "EntityFramework/6.3.0": {
         "type": "package",
         "build": {
-          "build/EntityFramework.props": {},
-          "build/EntityFramework.targets": {}
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -108,6 +108,7 @@
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -238,35 +239,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lipdi\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\hp1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\lipdi\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Particular\\PI1\\Master\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Mateus\\Desktop\\New folder\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
-      "projectName": "Entities",
-      "projectPath": "C:\\Users\\Mateus\\Desktop\\New folder\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mateus\\Desktop\\New folder\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
->>>>>>> 4236314a9f7d2fc220f5c3b3bed6cd67750ed3e3
+      "projectPath": "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\hp1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lipdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\hp1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -301,11 +287,25 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\hp1\\Documents\\GitHub\\ProjetoIntegrador1\\MercadOn\\Entities\\obj\\Entities.csproj.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
