@@ -1,11 +1,10 @@
-﻿
+﻿@model MercadOn.Models.Mercado.PedidoModel
 @{
     ViewBag.Title = "Pedido";
     Layout = "~/Views/Shared/_LayoutCliente.cshtml";
 }
 
-<h2>Pedido </h2> <br /><br /><button class="btn-success" style="float:right" onclick="finalizarPedido()">Finalizar pedido</button>
-<div id="totalPedido"></div>
+
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 @*<link rel="stylesheet" href="/resources/demos/style.css">*@
@@ -19,6 +18,7 @@
         font-size: .9em;
     }
 
+
     .ui-widget-header p, .ui-widget-content p {
         margin: 0;
     }
@@ -26,89 +26,81 @@
     #snaptarget {
         height: 140px;
     }
+
+    #sortable1, #sortable2 {
+        border: 1px solid #eee;
+        width: 142px;
+        min-height: 20px;
+        list-style-type: none;
+        margin: 0;
+        padding: 5px 0 0 0;
+        float: left;
+        margin-right: 10px;
+    }
+
+        #sortable1 li, #sortable2 li {
+            margin: 0 5px 5px 5px;
+            padding: 5px;
+            font-size: 1.2em;
+            width: 120px;
+        }
+
+    .carrinho-style {
+        width: 450px;
+        height: 450px;
+    }
 </style>
+<h2>Pedido </h2> <br /><br />
+<button class="btn-success button-confirm" style="float:right" onclick="finalizarPedido()">Finalizar pedido</button>
 
 <body>
+    @using (@Html.BeginForm("Pedido", "Mercado", FormMethod.Post, new { @class = "login100-form validate-form" }))
+    {
 
-    <div id="snaptarget" class="ui-widget-header" style="height:300px">
+        @*<div class="row">
+            <label>Total do pedido:</label><input type="text" id="totalPedido" />
+        </div>*@
+
         <p>Meu carrinho</p>
-    </div>
-
-    <br style="clear:both">
-
-    <div id="draggable" class="draggable ui-widget-content">
-        
-        <div class="card h-25">
-            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/5b58246ccb412-failed-products-innovations-technology-5b471e962fbd1__700.jpg" alt=""></a>
-            <a href="#">Salgadinhos</a>
-            <h5>R$6.99</h5>
-            <div class="card-body">
-                <h4 class="card-title"></h4>
 
 
+
+        <br style="clear:both">
+
+
+
+        @Html.HiddenFor(x => x.Carrinho)
+        @Html.HiddenFor(x => x.mercadoid)
+        @Html.HiddenFor(x => x.clienteid)
+        <div class="row">
+            <div class="col-lg-6">
+                Loja
+                <ul id="sortable1" class="connectedSortable" style="width:100%">
+
+                    @foreach (var produto in Model.Produtos)
+                    {
+                        <li class="ui-state-default" id="@produto.idProduto">
+                            <div class="card h-25">
+                                <a href="#"><img class="card-img-top" src="@produto.url" alt=""></a>
+                                <a href="#">@produto.nome</a>
+                                <h5>R$@produto.preco</h5>
+                                <div class="card-body">
+                                    <h4 class="card-title"></h4>
+                                </div>
+
+                            </div>
+                        </li>
+                    }
+                </ul>
             </div>
-
-        </div>
-        
-    </div>
-
-    <div id="draggable2" class="draggable ui-widget-content">
-        <div class="card h-25">
-            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/CCola.jpg" alt=""></a>
-            <a href="#">Coca - Cola</a>
-            <h5>R$$5.99</h5>
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-
-
+            <div class="col-lg-6" id="divCarrinho">
+                Meu Carrinho
+                <ul id="sortable2" class="connectedSortable" style="background-color:darkgrey; width:100%"></ul>
             </div>
-
         </div>
-    </div>
 
-    <div id="draggable3" class="draggable ui-widget-content">
-        <div class="card h-25">
-            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/Del-Valle.png" alt=""></a>
-            <a href="#">Del Valle Sucos</a>
-            <h5>R$6.99</h5>
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-
-
-            </div>
-
-        </div>
-    </div>
-
-    <div id="draggable4" class="draggable ui-widget-content">
-        <div class="card h-25">
-            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/mag-25Bacteria-t_CA0-master675.jpg" alt=""></a>
-            <a href="#">Sabonete anti-batericida.</a>
-            <h5>R$ 8.00</h5>
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-
-
-            </div>
-
-        </div>
-    </div>
-
-    <div id="draggable5" class="draggable ui-widget-content">
-        <div class="card h-25">
-            <a href="#"><img class="card-img-top" src="~/Content/StylePaginaProdutos/imgsprodutos/PIF.jpg" alt=""></a>
-            <a href="#">Lasanha Congelada</a>
-            <h5>R$6.99</h5>
-            <div class="card-body">
-                <h4 class="card-title"></h4>
-
-
-            </div>
-
-        </div>
-    </div>
-
-
+        <input type="submit" title="postPedido" hidden="hidden" id="postPedido" />
+    }
 </body>
 
 
@@ -116,23 +108,59 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $(function () {
-                $("#draggable").draggable({ snap: true });
+                $("#draggable").draggable({ snap: true, revert: false, cursor: 'pointer', opacity: '0,5' }).on("drop", function () { alert("soltou")});
                 $("#draggable2").draggable({ snap: ".ui-widget-header" });
                 $("#draggable3").draggable({ snap: ".ui-widget-header", snapMode: "outer" });
                 $("#draggable4").draggable({ grid: [20, 20] });
                 $("#draggable5").draggable({ grid: [80, 80] });
+
+                 var status = "@TempData["Status"]";
+
+                if (status != "") {
+                    if (status != "False") {
+                        alertify.success("@TempData["Msg"]");
+                    } else {
+                        alertify.error("@TempData["Msg"]");
+                    }
+                }
             });
 
 
+            $("#sortable1, #sortable2").sortable({
+                connectWith: ".connectedSortable",
 
+            }).disableSelection();
+
+            $(".button-confirm").on({
+                click: function (event, ui) {
+                    $("#Carrinho").val("");
+                    $("#sortable2").find('li').each(function () {
+                        var current = $(this);
+                        $("#Carrinho").val($("#Carrinho").val() + "," + current.context.id);
+
+
+                    })
+                }
+            });
 
         });
 
         function finalizarPedido() {
             alertify.confirm("Deseja finalizar o pedido?", function () {
-                alertify.success("Seu pedido foi finalizado, aguarde a entrega.");
+                $("#postPedido").click();
             });
+            return false;
         }
+
+        //$("#sortable2").on('DOMSubtreeModified', function (event) {
+
+        //    $("#sortable2").find('li').each(function () {
+        //        var current = $(this);
+        //        $("#totalPedido").val($("#totalPedido").val() + "," + current.context.id);
+
+
+        //    })
+        //})
 
     </script>
 }

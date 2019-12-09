@@ -1,0 +1,39 @@
+﻿@model MercadOn.Models.Cliente.PedidoItemModel
+@{
+    ViewBag.Title = "Pedidos Detalhe";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+
+<h2>Itens</h2>
+<br />
+<div class="row">
+
+    @*@Html.DisplayFor(x => x.pedidoid)*@
+    <div class="form-group">
+        <table id="tblProdutos" class="table">
+            <thead>
+                <tr>
+                    <th>Itme</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Itens)
+                {
+                    <tr>
+                        <td>@item.pedidoitemid</td>
+                        <td>@item.produto</td>
+                        <td>@item.quantidade</td>
+                        <td>@item.valor</td>
+                        
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+

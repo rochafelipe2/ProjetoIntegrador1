@@ -15,7 +15,8 @@ namespace Entities.Entities
         public long celular { get; set; }
         [ForeignKey("UsuarioEntity")]
         public int idUsuario { get; set; }
-        public UsuarioEntity UsuarioEntity { get; set; }
+        [Required(ErrorMessage = "obrigatório")]
+        public virtual UsuarioEntity UsuarioEntity { get; set; }
         public int ativo { get; set; }
         
     }

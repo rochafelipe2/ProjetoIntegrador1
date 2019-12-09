@@ -17,8 +17,9 @@ namespace Entities.Entities
 
         public string url { get; set; }
 
+        [Required(ErrorMessage = "obrigatório")]
         [ForeignKey("UsuarioEntity")]
         public int idUsuario { get; set; }
-        public UsuarioEntity UsuarioEntity { get; set; }
+        public virtual UsuarioEntity UsuarioEntity { get; set; }
     }
 }

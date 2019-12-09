@@ -133,6 +133,18 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MercadoController.cs" />
     <Compile Include="Controllers\MercadoProdutoController.cs" />
+    <Compile Include="Migrations\201912081551193_sprint10.cs" />
+    <Compile Include="Migrations\201912081551193_sprint10.designer.cs">
+      <DependentUpon>201912081551193_sprint10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente\PedidoDetail.cs" />
+    <Compile Include="Models\Cliente\PedidoItemDetail.cs" />
+    <Compile Include="Models\Cliente\PedidoItemModel.cs" />
+    <Compile Include="Models\Cliente\PedidoModel.cs" />
+    <Compile Include="Service\PedidoItemService.cs" />
+    <Compile Include="Service\PedidoService.cs" />
+    <Compile Include="Service\PrecoService.cs" />
+    <Compile Include="Service\ProdutoService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -156,11 +168,18 @@
     <Compile Include="Migrations\201912041834031_add_tabela_mercados_v2.designer.cs">
       <DependentUpon>201912041834031_add_tabela_mercados_v2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912072301347_create_all_tables.cs" />
+    <Compile Include="Migrations\201912072301347_create_all_tables.designer.cs">
+      <DependentUpon>201912072301347_create_all_tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cliente\ClienteModel.cs" />
     <Compile Include="Models\Login\LoginModel.cs" />
     <Compile Include="Models\Mercado\MercadoDetail.cs" />
     <Compile Include="Models\Mercado\MercadoModel.cs" />
+    <Compile Include="Models\Mercado\MercadoProdutoDetail.cs" />
+    <Compile Include="Models\Mercado\MercadoProdutoModel.cs" />
     <Compile Include="Models\Mercado\NovoMercadoDetail.cs" />
+    <Compile Include="Models\Mercado\PedidoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Configuration.cs" />
     <Compile Include="Repository\ContextMercadOn.cs" />
@@ -519,6 +538,7 @@
     <Content Include="Views\Cliente\Pedidos.cshtml" />
     <Content Include="Views\Mercado\Pedido.cshtml" />
     <Content Include="Views\Mercado\Index.cshtml" />
+    <Content Include="Views\Cliente\PedidoDetalhe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -559,6 +579,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912041834031_add_tabela_mercados_v2.resx">
       <DependentUpon>201912041834031_add_tabela_mercados_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912072301347_create_all_tables.resx">
+      <DependentUpon>201912072301347_create_all_tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912081551193_sprint10.resx">
+      <DependentUpon>201912081551193_sprint10.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

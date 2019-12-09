@@ -49,6 +49,7 @@ namespace MercadOn.Controllers
                 var cliente = clienteService.ConsultarPorFiltro(x => x.idUsuario == user.idUsuario, x => x.UsuarioEntity).FirstOrDefault();
                 if (cliente != null)
                 {
+                   
                     Session["cliente"] = cliente;
                     Session["clienteid"] = cliente.idCliente;
                     return RedirectToAction("Index", "Cliente");

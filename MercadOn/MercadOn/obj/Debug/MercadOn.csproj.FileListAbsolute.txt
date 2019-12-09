@@ -182,3 +182,5 @@ C:\Projetos\Particular\PI1\Master\ProjetoIntegrador1\MercadOn\MercadOn\obj\Debug
 C:\Projetos\Particular\PI1\Master\ProjetoIntegrador1\MercadOn\MercadOn\obj\Debug\DB.add_tabela_clientes.resources
 C:\Projetos\Particular\PI1\Master\ProjetoIntegrador1\MercadOn\MercadOn\obj\Debug\DB.add_tabela_mercados.resources
 C:\Projetos\Particular\PI1\Master\ProjetoIntegrador1\MercadOn\MercadOn\obj\Debug\DB.add_tabela_mercados_v2.resources
+C:\Projetos\Particular\PI1\Master\ProjetoIntegrador1\MercadOn\MercadOn\obj\Debug\DB.create_all_tables.resources
+C:\Projetos\Particular\PI1\Master\ProjetoIntegrador1\MercadOn\MercadOn\obj\Debug\DB.sprint10.resources

@@ -82,6 +82,7 @@ namespace MercadOn.Service.Base
             {
                 throw new Exception(exp.Message);
             }
+            
         }
 
 
@@ -113,12 +114,12 @@ namespace MercadOn.Service.Base
             {
                 this.Context.Set<TEntity>().Add(entity);
                 this.Context.SaveChanges();
-                this.Context.Dispose();
+                //this.Context.Dispose();
                 return true;
             }
             catch (Exception exp)
             {
-
+                throw exp;
             }
             return false;
         }

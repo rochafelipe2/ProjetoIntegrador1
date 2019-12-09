@@ -148,6 +148,13 @@
                     if (status != "False") {
                         alertify.success("Usuário Cadastrado");
                     } else {
+
+                        var msg = "@TempData["msg"]";
+
+                        if (msg) {
+                            alertify.error(msg);
+                        }
+
                         alertify.error("Usuário não Cadastrado");
                     }
                 }

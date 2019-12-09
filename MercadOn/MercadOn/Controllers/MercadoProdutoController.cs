@@ -16,15 +16,25 @@ namespace MercadOn.Controllers
             return View();
         }
 
-        public ActionResult MercadoProduto()
+        public ActionResult MercadoProduto(int idMercado)
         {
-            return View();
+            var service = new MercadoService(new ContextMercadOn());
+
+            var model = new MercadoProdutoModel();
+            model.Produtos = service.BuscarProdutosPorMercado(idMercado);
+            model.idMercado = idMercado;
+            model.idCliente = (int)Session["clienteid"];
+
+
+            return View(model);
         }
 
        
 
         public ActionResult Produto(long ID)
         {
+           
+
             return View();
         }
     }

@@ -57,7 +57,17 @@ namespace MercadOn.Controllers
         [HttpPost]
         public ActionResult CadastrarCliente(ClienteModel model)
         {
-            ConsumidorService service = new ConsumidorService(new ContextMercadOn());
+            var context = new ContextMercadOn();
+            ConsumidorService service = new ConsumidorService(context);
+            UsuarioService uService = new UsuarioService(context);
+
+            if(uService.ConsultarPorFiltro(x => x.email == model.email).FirstOrDefault() != null)
+            {
+                TempData["Status"] = false;
+                TempData["msg"] = "Email já utilizado, escolha outro.";
+                return View();
+            }
+
             var newCliente = service.Adicionar(new Entities.Entities.ClienteEntity() {
                 ativo = 1,
                 celular = model.celular,

@@ -14,9 +14,10 @@ namespace Entities.Entities
 
         public int ativo { get; set; }
 
+        [Required(ErrorMessage = "obrigatório")]
         [ForeignKey("UsuarioEntity")]
         public int idUsuario { get; set; }
-        public UsuarioEntity UsuarioEntity { get; set; }
+        public virtual UsuarioEntity UsuarioEntity { get; set; }
 
     }
 }

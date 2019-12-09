@@ -1,4 +1,4 @@
-﻿@*@model*@
+﻿@model MercadOn.Models.Cliente.PedidoModel
 @{
     ViewBag.Title = "Pedidos";
     Layout = "~/Views/Shared/_LayoutCliente.cshtml";
@@ -21,54 +21,17 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>0001</td>
-                    <td>Matuê</td>
-                    <td>Extra supermercados</td>
-                    <td>100</td>
-                    <td>Pendente</td>
-                    <td><img src="~/Content/buscar.png" /></td>
-                </tr>
-                <tr>
-                    <td>0002</td>
-                    <td>Tiririca</td>
-                    <td>Extra supermercados</td>
-                    <td>500</td>
-                    <td>Pendente</td>
-                    <td><img src="~/Content/buscar.png" /></td>
-                </tr>
-                <tr>
-                    <td>0003</td>
-                    <td>Igor</td>
-                    <td>Cidade canção</td>
-                    <td>150</td>
-                    <td>Aguardando entrega</td>
-                    <td><img src="~/Content/buscar.png" /></td>
-                </tr>
-                <tr>
-                    <td>0004</td>
-                    <td>Matuê</td>
-                    <td>Extra supermercados</td>
-                    <td>67</td>
-                    <td>Pendente</td>
-                    <td><img src="~/Content/buscar.png" /></td>
-                </tr>
-                <tr>
-                    <td>0005</td>
-                    <td>Tiririca</td>
-                    <td>Extra supermercados</td>
-                    <td>23</td>
-                    <td>Pendente</td>
-                    <td><img src="~/Content/buscar.png" /></td>
-                </tr>
-                <tr>
-                    <td>0006</td>
-                    <td>Igor</td>
-                    <td>Cidade canção</td>
-                    <td>234</td>
-                    <td>Aguardando entrega</td>
-                    <td><img src="~/Content/buscar.png" /></td>
-                </tr>
+                @foreach (var pedido in Model.Pedidos)
+                {
+                    <tr>
+                        <td>@pedido.pedidoid</td>
+                        <td>@pedido.Cliente</td>
+                        <td>@pedido.Mercado</td>
+                        <td>@pedido.total</td>
+                        <td>Pendente</td>
+                        <td><a href="/Cliente/PedidoDetalhe?idPedido=@pedido.pedidoid"><img src="~/Content/buscar.png" /></a></td>
+                    </tr>
+                }
             </tbody>
 
         </table>

@@ -14,7 +14,31 @@ namespace DB
         protected override void Seed(ContextMercadOn context)
         {
 
-            if(context.Mercados.Count() == 0)
+            //Categoria padrão
+
+            if (context.Categorias.Count() == 0)
+            {
+               
+                if (context.SubCategorias.Count() == 0)
+                {
+                    context.SubCategorias.Add(new SubcategoriaEntity()
+                    {
+                        CategoriaEntity = new CategoriaEntity()
+                        {
+                            ativo = 1,
+                            nomeCategoria = "Categoria teste 1"
+                        },
+                     ativo = 1,
+                     nomeSubcategoria = "Subcategoria teste 1"
+                });
+
+                    context.SaveChanges();
+                }
+            }
+
+
+
+            if (context.Mercados.Count() == 0)
             {
                 var mercadoInicial = new Entities.Entities.MercadoEntity()
                 {
@@ -34,11 +58,87 @@ namespace DB
 
                 context.Mercados.Add(mercadoInicial);
                 context.SaveChanges();
+
+                context.Produtos.Add(new ProdutoEntity()
+                {
+                    ativo = 1,
+                    SubcategoriaEntity = context.SubCategorias.First(),
+                    marcaProduto = "Salgadinhos",
+                    nomeProduto = "Salgadinhos",
+                    descricaoProduto = "Salgadinhos diversos, doritos, lays e ruffles.",
+                    url = "~/Content/StylePaginaProdutos/imgsprodutos/5b58246ccb412-failed-products-innovations-technology-5b471e962fbd1__700.jpg"
+                });
+
+                context.Produtos.Add(new ProdutoEntity()
+                {
+                    ativo = 1,
+                    SubcategoriaEntity = context.SubCategorias.First(),
+                    marcaProduto = "Coca - Cola",
+                    nomeProduto = "Coca - Cola",
+                    descricaoProduto = "Refrigerante lata coca cola.",
+                    url = "~/Content/StylePaginaProdutos/imgsprodutos/CCola.jpg"
+                });
+
+                context.Produtos.Add(new ProdutoEntity()
+                {
+                    ativo = 1,
+                    SubcategoriaEntity = context.SubCategorias.First(),
+                    marcaProduto = "Coca - Cola",
+                    nomeProduto = "Del Valle Sucos",
+                    descricaoProduto = "Sucos del valles diversos sabores.",
+                    url = "~/Content/StylePaginaProdutos/imgsprodutos/Del-Valle.png"
+                });
+
+                context.Produtos.Add(new ProdutoEntity()
+                {
+                    ativo = 1,
+                    SubcategoriaEntity = context.SubCategorias.First(),
+                    marcaProduto = "Bacteria",
+                    nomeProduto = "Bacteria",
+                    descricaoProduto = "Sabonete anti-batericida.",
+                    url = "~/Content/StylePaginaProdutos/imgsprodutos/mag-25Bacteria-t_CA0-master675.jpg"
+                });
+
+                context.Produtos.Add(new ProdutoEntity()
+                {
+                    ativo = 1,
+                    SubcategoriaEntity = context.SubCategorias.First(),
+                    marcaProduto = "Lasanha Congelada",
+                    nomeProduto = "Lasanha Congelada",
+                    descricaoProduto = "Lasanha congelada sadia tamanho grande.",
+                    url = "~/Content/StylePaginaProdutos/imgsprodutos/PIF.jpg"
+                });
+
+                context.Produtos.Add(new ProdutoEntity()
+                {
+                    ativo = 1,
+                    SubcategoriaEntity = context.SubCategorias.First(),
+                    marcaProduto = "Heineken",
+                    nomeProduto = "Heineken",
+                    descricaoProduto = "Cerveja heineken long-neck 600ml",
+                    url = "~/Content/StylePaginaProdutos/imgsprodutos/RNK.jpg"
+                });
+
+                context.SaveChanges();
+
+                foreach(var produto in context.Produtos)
+                {
+                    context.Precos.Add(new PrecoEntity()
+                    {
+                        MercadoEntity = mercadoInicial,
+                        ProdutoEntity = produto,
+                        precoProduto = 10
+                    });
+                }
+
+                context.SaveChanges();
+
+
             }
 
             if (context.Administradores.Count() == 0)
             {
-                
+
                 var usuarioMateus = new UsuarioEntity()
                 {
                     ativo = 1,

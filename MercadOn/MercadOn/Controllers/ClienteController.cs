@@ -69,7 +69,23 @@ namespace MercadOn.Controllers
 
         public ActionResult Pedidos(int clienteid)
         {
-            return View();
+            var model = new PedidoModel();
+            var pedidoService = new PedidoService(new ContextMercadOn());
+            model.Pedidos = pedidoService.BuscarPedidosPorCliente(clienteid).ToList();
+
+            return View(model);
         }
+
+        public ActionResult PedidoDetalhe(int idPedido)
+        {
+            var pedidoService = new PedidoService(new ContextMercadOn());
+            var model = new PedidoItemModel();
+
+            model.Itens = pedidoService.BuscarPedidoDetalhe(idPedido);
+
+            return View(model);
+        }
+
+       
     }
 }
