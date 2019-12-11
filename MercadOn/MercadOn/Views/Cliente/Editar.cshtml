@@ -37,25 +37,62 @@
             <span class="label-input100">E-mail</span>
         </div>
 
-       
 
+        <div class="limiter">
+            Endereço
+            <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                @Html.TextBoxFor(x => x.endereco.rua, new { @class = "input100" })
+                <span class="focus-input100"></span>
+                <span class="label-input100">Rua</span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                @Html.TextBoxFor(x => x.endereco.numero, new { @class = "input100" })
+                <span class="focus-input100"></span>
+                <span class="label-input100">Número</span>
+            </div>
 
-        <div class="flex-sb-m w-full p-t-3 p-b-32">
+            <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                @Html.TextBoxFor(x => x.endereco.bairro, new { @class = "input100" })
+                <span class="focus-input100"></span>
+                <span class="label-input100">Bairro</span>
+            </div>
 
+            <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                @Html.TextBoxFor(x => x.endereco.cidade, new { @class = "input100" })
+                <span class="focus-input100"></span>
+                <span class="label-input100">Cidade</span>
+            </div>
+            <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                @Html.TextBoxFor(x => x.endereco.cep, new { @class = "input100" })
+                <span class="focus-input100"></span>
+                <span class="label-input100">CEP</span>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+                @Html.TextBoxFor(x => x.endereco.complemento, new { @class = "input100" })
+                <span class="focus-input100"></span>
+                <span class="label-input100">Complemento</span>
+            </div>
         </div>
 
 
-        <div class="container-login100-form-btn">
-            <button class="login100-form-btn">
-                Editar
-            </button>
+
+            <div class="flex-sb-m w-full p-t-3 p-b-32">
+
+            </div>
+
+
+            <div class="container-login100-form-btn">
+                <button class="login100-form-btn">
+                    Editar
+                </button>
+            </div>
+
+            }
+
         </div>
-
-    }
-
-</div>
-@section scripts{
-    <script type="text/javascript">
+        @section scripts{
+            <script type="text/javascript">
 
         $(document).ready(function () {
             $(function () {
@@ -80,5 +117,5 @@
             alertify.confirm().setHeader("Atenção");
             alertify.alert().setHeader("Atenção");;
         }
-    </script>
-}
+            </script>
+        }

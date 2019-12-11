@@ -30,7 +30,7 @@ namespace MercadOn.Controllers
             return RedirectToAction("Login", "Login");
 
         }
-        
+
         [HttpPost]
         // POST: Login
         public ActionResult Login(LoginModel model)
@@ -39,9 +39,10 @@ namespace MercadOn.Controllers
             var service = new UsuarioService(context);
             var clienteService = new ConsumidorService(context);
             var mercadoService = new MercadoService(context);
+            var admService = new AdministradorService(context);
             var user = service.ConsultarPorFiltro(x => x.email == model.Email && x.senha == model.Senha).FirstOrDefault();
-            
-            if(user != null && user.idUsuario > 0)
+
+            if (user != null && user.idUsuario > 0)
             {
                 ViewBag.Status = true;
                 //Usuário existeste.
@@ -49,20 +50,31 @@ namespace MercadOn.Controllers
                 var cliente = clienteService.ConsultarPorFiltro(x => x.idUsuario == user.idUsuario, x => x.UsuarioEntity).FirstOrDefault();
                 if (cliente != null)
                 {
-                   
+
                     Session["cliente"] = cliente;
                     Session["clienteid"] = cliente.idCliente;
                     return RedirectToAction("Index", "Cliente");
                 }
                 else
                 {
-                    var empresa = mercadoService.ConsultarPorFiltro(x => x.idUsuario == user.idUsuario, x => x.UsuarioEntity).FirstOrDefault();
-
-                    if(empresa != null)
+                    var adm = admService.ConsultarPorFiltro(x => x.idUsuario == user.idUsuario).FirstOrDefault();
+                    if (adm != null)
                     {
-                        Session["mercado"] = empresa;
-                        Session["mercadoid"] = empresa.idMercado;
-                        return RedirectToAction("Index", "Empresa");
+                        Session["adm"] = adm;
+                        Session["admid"] = adm.idAdministrador;
+                        return RedirectToAction("Index", "Administrador");
+                    }
+                    else
+                    {
+
+                        var empresa = mercadoService.ConsultarPorFiltro(x => x.idUsuario == user.idUsuario, x => x.UsuarioEntity).FirstOrDefault();
+
+                        if (empresa != null)
+                        {
+                            Session["mercado"] = empresa;
+                            Session["mercadoid"] = empresa.idMercado;
+                            return RedirectToAction("Index", "Mercado");
+                        }
                     }
                 }
 

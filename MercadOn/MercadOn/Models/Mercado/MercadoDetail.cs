@@ -12,6 +12,7 @@ namespace MercadOn.Models.Mercado
         public String NomeMercado {get;set;}
         public String Endereco { get; set; }
         public String Url { get; set; }
+        public String Status { get; set; }
 
     }
 }

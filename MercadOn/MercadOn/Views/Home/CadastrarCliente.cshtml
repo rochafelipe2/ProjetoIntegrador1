@@ -57,7 +57,7 @@
 
 
                         <div class="wrap-input100 validate-input" data-validate="Um email válido é necessário ex@abc.xyz">
-                            @Html.TextBoxFor(x => x.cpf, new { @class = "input100" })
+                            @Html.TextBoxFor(x => x.cpf, new { @class = "input100", maxlength=11 })
                             <span class="focus-input100"></span>
                             <span class="label-input100">CPF</span>
                         </div>
@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
-                            @Html.TextBoxFor(x => x.email, new { @class = "input100" })
+                            @Html.TextBoxFor(x => x.email, new { @class = "input100", @type="email" })
                             <span class="focus-input100"></span>
                             <span class="label-input100">E-mail</span>
                         </div>

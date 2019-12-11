@@ -68,6 +68,20 @@ namespace MercadOn.Controllers
                 return View();
             }
 
+            if (service.ConsultarPorFiltro(x => x.cpf == model.cpf).FirstOrDefault() != null)
+            {
+                TempData["Status"] = false;
+                TempData["msg"] = "CPF já utilizado, escolha outro.";
+                return View();
+            }
+
+            if (service.ConsultarPorFiltro(x => x.celular == model.celular).FirstOrDefault() != null)
+            {
+                TempData["Status"] = false;
+                TempData["msg"] = "Celular já utilizado, escolha outro.";
+                return View();
+            }
+
             var newCliente = service.Adicionar(new Entities.Entities.ClienteEntity() {
                 ativo = 1,
                 celular = model.celular,

@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdministradorController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -137,13 +138,28 @@
     <Compile Include="Migrations\201912081551193_sprint10.designer.cs">
       <DependentUpon>201912081551193_sprint10.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Administrator\AdministradorModel.cs" />
+    <Compile Include="Models\Categoria\CategoriaDetail.cs" />
+    <Compile Include="Models\Categoria\CategoriaModel.cs" />
     <Compile Include="Models\Cliente\PedidoDetail.cs" />
     <Compile Include="Models\Cliente\PedidoItemDetail.cs" />
     <Compile Include="Models\Cliente\PedidoItemModel.cs" />
     <Compile Include="Models\Cliente\PedidoModel.cs" />
+    <Compile Include="Models\Endereco\EnderecoDetail.cs" />
+    <Compile Include="Models\Mercado\ProdutoPrecoDetail.cs" />
+    <Compile Include="Models\Mercado\ProdutoPrecoModel.cs" />
+    <Compile Include="Models\Produto\ProdutoDetail.cs" />
+    <Compile Include="Models\Produto\ProdutoModel.cs" />
+    <Compile Include="Models\Produto\ProdutoViewModel.cs" />
+    <Compile Include="Models\Subcategoria\SubcategoriaDetail.cs" />
+    <Compile Include="Models\Subcategoria\SubcategoriaModel.cs" />
+    <Compile Include="Service\AdministradorService.cs" />
+    <Compile Include="Service\CategoriaService.cs" />
+    <Compile Include="Service\EnderecoService.cs" />
     <Compile Include="Service\PedidoItemService.cs" />
     <Compile Include="Service\PedidoService.cs" />
     <Compile Include="Service\PrecoService.cs" />
+    <Compile Include="Service\ProdutoPrecoService.cs" />
     <Compile Include="Service\ProdutoService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -198,6 +214,7 @@
     <Compile Include="Service\Base\ServiceBase.cs" />
     <Compile Include="Service\ConsumidorService.cs" />
     <Compile Include="Service\MercadoService.cs" />
+    <Compile Include="Service\SubcategoriaService.cs" />
     <Compile Include="Service\UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +241,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\buscar.png" />
+    <Content Include="Content\produto-sem-imagem.jpg" />
     <Content Include="Content\Style Pagina inicial\assets\bootstrap\css\bootstrap.min.css" />
     <Content Include="Content\Style Pagina inicial\assets\img\01.jpg" />
     <Content Include="Content\Style Pagina inicial\assets\img\02.jpg" />
@@ -539,6 +557,11 @@
     <Content Include="Views\Mercado\Pedido.cshtml" />
     <Content Include="Views\Mercado\Index.cshtml" />
     <Content Include="Views\Cliente\PedidoDetalhe.cshtml" />
+    <Content Include="Views\Mercado\ProdutoPreco.cshtml" />
+    <Content Include="Views\Mercado\Produto.cshtml" />
+    <Content Include="Views\Mercado\Categoria.cshtml" />
+    <Content Include="Views\Mercado\Subcategoria.cshtml" />
+    <Content Include="Views\Administrador\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

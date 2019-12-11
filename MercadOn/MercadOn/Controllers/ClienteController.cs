@@ -1,5 +1,6 @@
 ﻿using Entities.Entities;
 using MercadOn.Models.Cliente;
+using MercadOn.Models.Endereco;
 using MercadOn.Service;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,12 @@ namespace MercadOn.Controllers
     {
 
         private ConsumidorService service;
-
+        private EnderecoService enderecoService;
         public ClienteController()
         {
-            service = new ConsumidorService(new ContextMercadOn());
+            var context = new ContextMercadOn();
+            service = new ConsumidorService(context);
+            enderecoService = new EnderecoService(context);
         }
         // GET: Cliente
         public ActionResult Index()
@@ -32,13 +35,15 @@ namespace MercadOn.Controllers
         public ActionResult Editar(int clienteid)
         {
             var edited = service.ConsultarPorFiltro(x => x.idCliente == clienteid, x => x.UsuarioEntity).FirstOrDefault();
+            var endereco = enderecoService.ConsultarPorFiltro(x => x.idUsuario == edited.idUsuario).FirstOrDefault();
             var model = new ClienteModel()
             {
                 celular = edited.celular,
                 cpf = edited.cpf,
                 email = edited.UsuarioEntity.email,
                 nome = edited.nome,
-                clienteid = edited.idCliente
+                clienteid = edited.idCliente,
+                endereco = endereco != null ? this.ConverterEndereco(endereco) : new Models.Endereco.EnderecoDetail()
             };
 
             return View(model);
@@ -48,23 +53,27 @@ namespace MercadOn.Controllers
         public ActionResult Editar(ClienteModel model)
         {
             var edited = service.ConsultarPorFiltro(x => x.idCliente == model.clienteid).FirstOrDefault();
-
+            var endereco = model.endereco.id > 0 ? enderecoService.ConsultarPorFiltro(x => x.idEndereco == model.endereco.id).FirstOrDefault() : new EnderecoEntity(); ;
             edited.nome = model.nome;
             edited.cpf = model.cpf;
-            
+
+            ConverterEndereco(model.endereco, ref endereco);
 
             bool atualizado = service.Atualizar(edited);
 
             if (atualizado)
             {
-                @TempData["Status"] = true;
+                enderecoService.Atualizar(endereco);
+                TempData["Status"] = true;
+                TempData["Msg"] = "Registro atualizado com sucesso.";
             }
             else
             {
-                @TempData["Status"] = false;
+                TempData["Status"] = false;
+                TempData["Msg"] = "Registro não atualizado.";
             }
 
-            return View();
+            return RedirectToAction("Editar", new { clienteid  = model .clienteid});
         }
 
         public ActionResult Pedidos(int clienteid)
@@ -86,6 +95,32 @@ namespace MercadOn.Controllers
             return View(model);
         }
 
-       
+        public EnderecoDetail ConverterEndereco(EnderecoEntity e)
+        {
+            return new EnderecoDetail()
+            {
+                bairro = e.bairro,
+                cep = e.cep,
+                cidade = e.cidade,
+                complemento = e.complemento,
+                id = e.idEndereco,
+                nome = e.nomeEndereco,
+                numero = e.numero,
+                rua = e.rua
+            };
+         }
+
+        public EnderecoEntity  ConverterEndereco(EnderecoDetail d, ref EnderecoEntity e)
+        {
+
+            e.bairro = d.bairro;
+            e.cep = d.cep;
+            e.cidade = d.cidade;
+            e.complemento = d.complemento;
+            e.nomeEndereco = d.nome;
+            e.rua = d.rua;
+
+            return e;
+        }
     }
 }

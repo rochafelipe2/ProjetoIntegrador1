@@ -1,0 +1,72 @@
+﻿@model MercadOn.Models.Produto.ProdutoModel
+@{
+    ViewBag.Title = "Produto";
+    Layout = "~/Views/Shared/_LayoutMercado.cshtml";
+}
+
+<h2>Produto</h2>
+
+<div class="limiter">
+
+    @using (@Html.BeginForm("Produto", "Mercado", FormMethod.Post, new { @class = "login100-form validate-form" }))
+    {
+
+        <div class="wrap-input100 validate-input" data-validate="Um email válido é necessário ex@abc.xyz">
+            @Html.TextBoxFor(x => x.nome, new { @class = "input100" })
+            <span class="focus-input100"></span>
+            <span class="label-input100">Nome Produto</span>
+        </div>
+
+
+        <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+            @Html.TextBoxFor(x => x.descricao, new { @class = "input100" })
+            <span class="focus-input100"></span>
+            <span class="label-input100">Descrição</span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+            @Html.TextBoxFor(x => x.marca, new { @class = "input100" })
+            <span class="focus-input100"></span>
+            <span class="label-input100">Marca</span>
+        </div>
+
+        <div class="flex-sb-m w-full p-t-3 p-b-32">
+
+        </div>
+
+
+        <div class="container-login100-form-btn">
+            <button class="login100-form-btn">
+                Editar
+            </button>
+        </div>
+
+    }
+
+    <div class="row">
+
+        <div class="form-group">
+            <table id="tblProdutos" class="table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Descrição</th>
+                        <th>Marca</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var produto in Model.Produtos)
+                    {
+                        <tr>
+                            <td>@produto.nome</td>
+                            <td>@produto.descricao</td>
+                            <td>@produto.marca</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</div>

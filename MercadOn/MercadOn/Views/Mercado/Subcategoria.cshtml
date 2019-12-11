@@ -1,0 +1,33 @@
+﻿@model MercadOn.Models.Subcategoria.SubcategoriaModel
+@{
+    ViewBag.Title = "Subcategoria";
+    Layout = "~/Views/Shared/_LayoutMercado.cshtml";
+}
+
+<h2>Subcategoria</h2>
+
+<div class="row">
+
+    <div class="form-group">
+        <table id="tblProdutos" class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Subcategoria</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var categoria in Model.Subcategorias)
+                {
+                <tr>
+                    <td>@categoria.id</td>
+                    <td>@categoria.nome</td>
+                    <td>@categoria.categoria</td>
+                </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

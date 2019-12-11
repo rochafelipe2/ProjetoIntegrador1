@@ -1,0 +1,86 @@
+﻿@model MercadOn.Models.Mercado.ProdutoPrecoModel
+@{
+    ViewBag.Title = "ProdutoPreco";
+    Layout = "~/Views/Shared/_LayoutMercado.cshtml";
+}
+
+<h2>ProdutoPreco</h2>
+
+<div class="row">
+    @using (@Html.BeginForm("ProdutoPreco", "Mercado", FormMethod.Post, new { @class = "login100-form validate-form" }))
+    {
+        @Html.HiddenFor(x => x.idMercado)
+        <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+            @Html.TextBoxFor(x => x.preco, new { @class = "input100", @type = "number" })
+            <span class="focus-input100"></span>
+            <span class="label-input100">Preço</span>
+        </div>
+        <br />
+        <div class="wrap-input100 validate-input" data-validate="Uma senha é necessária">
+            @Html.DropDownListFor(m => m.produtoSelecinado, Model.Produtos.Select(c => new SelectListItem { Text = c.nome, Value = c.id.ToString() }), "Selecionar", new { @class = "tabcustom" })
+            <span class="focus-input100"></span>
+            <span class="label-input100">Produtos</span>
+        </div>
+
+        <div class="">
+            <br />
+            <input type="submit" title="Salvar preço" />
+        </div>
+    }
+</div>
+
+<br />
+
+<div class="row">
+
+    <div class="form-group">
+        <table id="tblProdutos" class="table">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preco</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var produto in Model.ProdutosPreco)
+                {
+                    <tr>
+                        <td>@produto.nome</td>
+                        <td>@produto.preco</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $(function () {
+                configureModal();
+
+                var status = "@TempData["Status"]";
+
+                if (status != "") {
+                    if (status != "False") {
+                        alertify.success("@TempData["Msg"]");
+                    } else {
+                        alertify.error("@TempData["Msg"]");
+                    }
+                }
+
+            });
+
+
+        });
+
+        function configureModal() {
+            alertify.confirm().setHeader("Atenção");
+            alertify.alert().setHeader("Atenção");;
+        }
+    </script>
+}
+

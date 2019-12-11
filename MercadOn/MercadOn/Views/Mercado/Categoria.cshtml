@@ -1,0 +1,35 @@
+﻿@model MercadOn.Models.Categoria.CategoriaModel
+@{
+    ViewBag.Title = "Categoria";
+    Layout = "~/Views/Shared/_LayoutMercado.cshtml";
+}
+
+<h2>Categoria</h2>
+
+
+<div class="row">
+
+    <div class="form-group">
+        <table id="tblProdutos" class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Categoria</th>
+               
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var categoria in Model.Categorias)
+                {
+                    <tr>
+                        <td>@categoria.id</td>
+                        <td>@categoria.nome</td>
+                      
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+

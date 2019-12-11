@@ -1,0 +1,36 @@
+﻿@model MercadOn.Models.Administrator.AdministradorModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutMercado.cshtml";
+}
+
+<h2>Mercados</h2>
+
+<div class="row">
+
+    <div class="form-group">
+        <table id="tblProdutos" class="table">
+            <thead>
+                <tr>
+                    <th>Mercado</th>
+                    <th>Status</th>
+                    <th>Ativar</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var mercado in Model.Mercados)
+                {
+                <tr>
+                    <td>@mercado.mercadoid</td>
+                    <td>@mercado.NomeMercado</td>
+                    <td>@mercado.Status</td>
+                    <td><a href="#">Ativar</a></td>
+                </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
