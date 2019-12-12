@@ -52,7 +52,7 @@ namespace MercadOn.Controllers
         [HttpPost]
         public ActionResult Editar(ClienteModel model)
         {
-            var edited = service.ConsultarPorFiltro(x => x.idCliente == model.clienteid).FirstOrDefault();
+            var edited = service.ConsultarPorFiltro(x => x.idCliente == model.clienteid, x => x.UsuarioEntity).FirstOrDefault();
             var endereco = model.endereco.id > 0 ? enderecoService.ConsultarPorFiltro(x => x.idEndereco == model.endereco.id).FirstOrDefault() : new EnderecoEntity(); ;
             edited.nome = model.nome;
             edited.cpf = model.cpf;
@@ -63,7 +63,17 @@ namespace MercadOn.Controllers
 
             if (atualizado)
             {
-                enderecoService.Atualizar(endereco);
+
+                if(endereco.idEndereco > 0)
+                {
+                    enderecoService.Atualizar(endereco);
+                }
+                else
+                {
+                    endereco.UsuarioEntity = edited.UsuarioEntity;
+                    enderecoService.Adicionar(endereco);
+                }
+                
                 TempData["Status"] = true;
                 TempData["Msg"] = "Registro atualizado com sucesso.";
             }
